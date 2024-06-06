@@ -18,16 +18,7 @@ class Day1 {
         }
 
         private fun formatValue(value: Int, count: Int): String {
-            return addZeros((value.toFloat() / count).toString())
-        }
-
-        private fun addZeros(value: String): String {
-            val sb = StringBuilder(value)
-            while (sb.length < 8) {
-                sb.append("0")
-            }
-
-            return sb.toString()
+            return String.format("%.6f", (value.toFloat() / count))
         }
     }
 
