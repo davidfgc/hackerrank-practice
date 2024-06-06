@@ -1,6 +1,6 @@
 package challenges.oneweekpreparation
 
-import java.lang.StringBuilder
+import java.text.DecimalFormat
 
 class Day1 {
 
@@ -18,7 +18,8 @@ class Day1 {
         }
 
         private fun formatValue(value: Int, count: Int): String {
-            return String.format("%.6f", (value.toFloat() / count))
+            val formatter = DecimalFormat("0.000000")
+            return formatter.format(value.toFloat() / count)
         }
     }
 
