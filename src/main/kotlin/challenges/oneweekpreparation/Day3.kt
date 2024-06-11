@@ -1,6 +1,7 @@
 package challenges.oneweekpreparation
 
 object Day3 {
+
     fun findZigZagSequence(values: List<Int>): String {
         val sorted = values.sorted().toMutableList()
         var leftIndex = (values.count() / 2.0).toInt()

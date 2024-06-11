@@ -4,12 +4,12 @@ import data.DataReader
 import org.junit.jupiter.api.Test
 import kotlin.test.assertEquals
 
-class Day3Test {
+class DayTemplateTest {
 
     private val testData = mutableListOf<Triple<String, String, String>>()
 
     @Test
-    fun testMethod() {
+    fun testDataMethod() {
         readData()
         testData.forEachIndexed { index, it ->
             println(it)
@@ -21,6 +21,16 @@ class Day3Test {
         }
     }
 
+    @Test
+    fun testMethod() {
+        val input = ""
+        val expected = ""
+
+        val output = "" // DayX.method(input)
+
+        assertEquals(expected, output)
+    }
+
     private fun readData() {
         val input = DataReader.readResourceFile("template-input")
         val output = DataReader.readResourceFile("template-output")
@@ -30,30 +40,8 @@ class Day3Test {
         }
     }
 
+    private fun linesToMatrix(lines: List<String>) =
+        lines.map {
+            it.split(" ").map { value -> value.toInt() }.toTypedArray()
+        }.toTypedArray()
 }
-
-//fun towerBreakers(n: Int, m: Int): Int {
-//    var player = 1
-//    var move: Boolean
-//    var towers = Array(n) { m }
-//
-//    loopGame@ while (towers.any { it > 1 }) {
-//        move = false
-//        towers.forEachIndexed { towerIndex, it ->
-//            if (it == 1) continue@loopGame
-//            loopTowers@ for (index in it - 1 downTo 1) {
-//                println("for: $index")
-//                if (it % index == 0) {
-//                    towers[towerIndex] = it
-//                    player = changePlayer(player)
-//                    move = true
-//                    break@loopTowers
-//                }
-//            }
-//            val s = ""
-//            if (!move) break
-//        }
-//    }
-//
-//    return changePlayer(player)
-//}
