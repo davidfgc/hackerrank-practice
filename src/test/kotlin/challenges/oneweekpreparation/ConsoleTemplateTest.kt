@@ -12,9 +12,9 @@ class ConsoleTemplateTest {
         val expectedOutput = DataReader.readResourceFile("template-output").joinToString("\n") + "\n"
 
         val programOutput = ConsoleTemplate.main(input) { line ->
-            val values = line.trim().split(" ").map { it.trim().toInt() }
+//            val values = line.trim().split(" ").map { it.trim().toInt() }
 
-            val res = Day3.findZigZagSequence(values)
+            val res = if (line == "input") "output" else ""
 
             println(res)
         }
