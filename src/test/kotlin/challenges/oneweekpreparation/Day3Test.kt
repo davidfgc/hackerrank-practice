@@ -10,7 +10,7 @@ class Day3Test {
 
     @Test
     fun testMethod() {
-        readData()
+        readData("day3-zigzag")
         testData.forEachIndexed { index, it ->
             println(it)
             val values = it.first.trim().split(" ").map { it.trim().toInt() }
@@ -21,15 +21,25 @@ class Day3Test {
         }
     }
 
-    private fun readData() {
-        val input = DataReader.readResourceFile("template-input")
-        val output = DataReader.readResourceFile("template-output")
+    private fun readData(filePrefix: String = "day3") {
+        val input = DataReader.readResourceFile("$filePrefix-input")
+        val output = DataReader.readResourceFile("$filePrefix-output")
 
         input.forEachIndexed { index, it ->
             testData.add(Triple(it, "", output[index]))
         }
     }
 
+    @Test
+    fun palindromeIndex() {
+        readData("day3-palindrome")
+
+        testData.forEach {
+            val index = Day3.palindromeIndex(it.first)
+
+            assertEquals(it.third.toInt(), index)
+        }
+    }
 }
 
 //fun towerBreakers(n: Int, m: Int): Int {

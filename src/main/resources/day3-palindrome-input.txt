@@ -1,0 +1,6 @@
+abccbxa
+axbccba
+abccbax
+xabccba
+abccba
+abcdef
