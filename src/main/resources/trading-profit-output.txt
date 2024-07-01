@@ -1,0 +1,6 @@
+BUY stock2 2
+BUY stock1 4
+CHANGE stock2 -8
+SELL stock1 2
+BUY stock3 3
+QUERY
