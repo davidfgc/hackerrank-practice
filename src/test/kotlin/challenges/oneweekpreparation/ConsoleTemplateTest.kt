@@ -13,6 +13,7 @@ class ConsoleTemplateTest {
 
         val programOutput = ConsoleTemplate.main(input) { line ->
 //            val values = line.trim().split(" ").map { it.trim().toInt() }
+//            val value = line.trim().toInt()
 
             val res = if (line == "input") "output" else ""
 

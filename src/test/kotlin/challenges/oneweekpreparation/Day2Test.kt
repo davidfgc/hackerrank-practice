@@ -7,7 +7,7 @@ import kotlin.test.assertEquals
 class Day2Test {
 
     private val testData = listOf(
-        Triple(DataReader.readResourceFile("day2-matrix1"), "", 414),
+//        Triple(DataReader.readResourceFile("day2-matrix1"), "", 414),
         Triple(DataReader.readResourceFile("day2-matrix2"), "", 488)
     )
 

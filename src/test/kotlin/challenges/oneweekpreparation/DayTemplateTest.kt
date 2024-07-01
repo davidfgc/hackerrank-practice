@@ -16,7 +16,7 @@ class DayTemplateTest {
             val line = triple.first.trim()
 //            val values = triple.first.trim().split(" ").map { it.trim().toInt() }
 
-            val res = if (line == "input") "output" else ""
+            val res = if (line == "input") "output" else "" // DayX.method(input)
 
             assertEquals(triple.third, res, "Failed test case #${index + 1}")
         }
@@ -51,8 +51,4 @@ class DayTemplateTest {
         }
     }
 
-    private fun linesToMatrix(lines: List<String>) =
-        lines.map {
-            it.split(" ").map { value -> value.toInt() }.toTypedArray()
-        }.toTypedArray()
 }
